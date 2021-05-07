@@ -120,7 +120,7 @@ lI {
 
 .slider__wrapper {
   position: relative;
-  padding: 54px 137px 63px 112px;
+  padding: 54px 112px 76px 111.5px;
 }
 
 .slider__header {
@@ -138,12 +138,14 @@ lI {
 .slider__content {
   display: flex;
   justify-content: start;
-  height: 483px;
+  height: 76.1vh;
+  border: 1px solid black;
 }
 
 .vertical-phone {
   height: 100%;
   width: 32%;
+  background-color: yellow;
 }
 
 .vertical-phone, .horizontal-phone {
@@ -184,12 +186,12 @@ lI {
   z-index: 3;
 } 
 
-.horizontal-phone {
+/* .horizontal-phone {
   height: 100%;
   width: 32%;
   margin-left: 22.7%;
   transform: rotate(90deg);
-}
+} */
 
 .horizontal-phone__img {
   background-image: url('./assets/img/vertical-phone.svg');
@@ -232,12 +234,14 @@ lI {
 }
 
 .left-arrow {
-  top: 283px;
+  top: 50%;
+  margin-top: -1.8%;
   left: 35px;
 }
 
 .right-arrow {
-  top: 283px;
+  top: 50%;
+  margin-top: -1.8%;
   right: 35px;
 }
 
@@ -245,7 +249,7 @@ lI {
 .our-services {
   width: 100%;
   background: #F2F2F2;
-  border-bottom: 8px solid #FFFFFF;;
+  border-bottom: 7px solid #F2F2F2;
 }
 .out-services__wrapper {
   max-width: 1020px;
@@ -329,6 +333,7 @@ lI {
   width: 100%;
   background-color: #2D303A;
   color: #666D89;
+  border-bottom: 1px solid #2D303A;;
 }
 
 .portfolio__wrapper {
@@ -382,4 +387,74 @@ lI {
 
 .portfolio__img-block-img{
   margin-bottom: 20px;
+}
+
+/* About Us */
+.about-us {
+  width: 100%;
+  background-color: #F2F2F2; 
+}
+
+.about-us__wrapper {
+  padding: 59px 40px 67.98px;
+}
+
+.about-us_title {
+  color: #666D89
+}
+
+.about-us_description {
+  margin-top: 19px;
+  color: #767E9E;
+}
+
+.staff {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 43px;
+}
+
+.employee {
+  width: 300px;
+}
+
+.employee-2, .employee-3 {
+  margin-left: 20px;
+}
+
+.employee__name {
+  margin-top: 14px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 18px;
+  color: #666D89
+}
+
+.employee__description {
+  margin-top: 10px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: justify;
+  color: #767E9E;
+}
+
+.sociam-media {
+  display: flex;
+  margin: 23px 0 23px;
+}
+
+.social-media__icon {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border: 1px solid #666D89;
+  border-radius: 50%;
 }
