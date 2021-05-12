@@ -38,21 +38,20 @@
       </nav>
     </div>
   </header>
+
   <!-- slider -->
   <section class="slider">
     <div class="wrapper wrapper slider__wrapper">
       <h2 class="slider__header">Slider</h2>
-      <div class="slider__content">
-        <div class="vertical-phone">
-          <div class="vertical-phone__img"></div>
-          <!-- <div class="vertical-phone__shadow"></div>
-          <div class="vertical-phone__display"></div> -->
-        </div>
-        <div class="horizontal-phone">
-          <!-- <div class="horizontal-phone__img"></div> -->
-          <!-- <div class="horizontal-phone__shadow"></div>
-          <div class="horizontal-phone__display"></div> -->
-        </div>
+      <div class="vertical-phone">
+        <div class="vertical-phone__img"></div>
+        <div class="vertical-phone__shadow"></div>
+        <div class="vertical-phone__display"></div>
+      </div>
+      <div class="horizontal-phone">
+        <div class="horizontal-phone__img"></div>
+        <div class="horizontal-phone__shadow"></div>
+        <div class="horizontal-phone__display"></div>
       </div>
       <button class="left-arrow">
         <img src="./assets/img/arrow-left.svg" alt="left-arrow">
@@ -62,6 +61,7 @@
       </button>
     </div>
   </section>
+
   <!-- our services -->
   <section class="our-services">
     <div class="wrapper out-services__wrapper">
@@ -78,7 +78,7 @@
             <p class="our-services__advantages-item-desc-text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
           </div>
         </div>
-        <div class="our-services__advantages-item">
+        <div class="our-services__advantages-item mr">
           <div class="our-services__advantages-item-img">
             <img src="./assets/img/services-item-2.svg" alt="light bulb">
           </div>
@@ -87,7 +87,7 @@
             <p class="our-services__advantages-item-desc-text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
           </div>
         </div>
-        <div class="our-services__advantages-item last-in-row">
+        <div class="our-services__advantages-item">
           <div class="our-services__advantages-item-img">
             <img src="./assets/img/services-item-3.svg" alt="heart">
           </div>
@@ -97,7 +97,7 @@
             </p>
           </div>
         </div>
-        <div class="our-services__advantages-item">
+        <div class="our-services__advantages-item mr">
           <div class="our-services__advantages-item-img">
             <img src="./assets/img/services-item-4.svg" alt="smartphone">
           </div>
@@ -115,7 +115,7 @@
             <p class="our-services__advantages-item-desc-text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .</p>
           </div>
         </div>
-        <div class="our-services__advantages-item last-in-row">
+        <div class="our-services__advantages-item mr">
           <div class="our-services__advantages-item-img">
             <img src="./assets/img/services-item-6.svg" alt="star">
           </div>
@@ -161,9 +161,9 @@
       <p class="description description about-us_description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
 
       <div class="staff">
-        <div class="employee employee-1">
+        <div class="employee">
           <div class="employee__img">
-            <img src="./assets//img/photo-1.svg" alt="employee-1">
+            <img class="employee__img-picture" src="./assets//img/photo-1.svg" alt="employee-1">
           </div>
           <h3 class="employee__name">Adam Jensen</h3>
           <p class="employee__description">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
@@ -182,9 +182,9 @@
             </a>
           </div>
         </div>
-        <div class="employee employee-2">
+        <div class="employee center-block">
           <div class="employee__img">
-            <img src="./assets//img/photo-2.svg" alt="employee-2">
+            <img class="employee__img-picture" src="./assets//img/photo-2.svg" alt="employee-2">
           </div>
           <h3 class="employee__name">Desmond Miles</h3>
           <p class="employee__description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
@@ -203,9 +203,9 @@
             </a>
           </div>
         </div>
-        <div class="employee employee-3">
+        <div class="employee">
           <div class="employee__img">
-            <img src="./assets//img/photo-3.svg" alt="employee-3">
+            <img class="employee__img-picture" src="./assets//img/photo-3.svg" alt="employee-3">
           </div>
           <h3 class="employee__name">Scolara Visari</h3>
           <p class="employee__description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
@@ -227,5 +227,81 @@
       </div>
     </div>
   </section>
+  <!-- get a quote -->
+  <section class="get-quote">
+    <div class="wrapper get-quote__wrapper">
+      <h2 class="get-quote__title">Get a Quote</h2>
+      <p class="get-quote__description">
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+      </p>
+
+      <div class="form-block">
+        <div class="form-block__form">
+          <form action="#" id="get-quote">
+            <input type="text" class="form-block__input" placeholder="Name (required)">
+            <input type="text" class="form-block__input" placeholder="Email (required)">
+            <input type="text" class="form-block__input" placeholder="Subject">
+            <textarea type="text" class="form-block__input form-block__textarea" placeholder="Describe your project in detail..."></textarea>
+            <button tupe="submit" form="get-quote" class="form-block__btn">Send</button>
+          </form>
+        </div>
+        <div class="form-block__info">
+          <h3 class="form-block__info-title">Contact Information</h3>
+          <p class="form-block__info-description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
+          </p>
+
+          <div class="contacts">
+            <div class="contacts__contact">
+              <div class="contacts__contact-icon">
+                <img src="./assets/img/ico-location.svg" alt="">
+              </div>
+              <div class="contacts__contact-description">
+                Elm St. 14/05 Lost City
+              </div>
+            </div>
+            <div class="contacts__contact">
+              <div class="contacts__contact-icon">
+                <img src="./assets/img/ico-phone.svg" alt="">
+              </div>
+              <div class="contacts__contact-description">
+                03528 331 86 35 
+              </div>
+            </div>
+            <div class="contacts__contact">
+              <div class="contacts__contact-icon">
+                <img src="./assets/img/ico-mail.svg" alt="">
+              </div>
+              <div class="contacts__contact-description">
+                info@singolo.com
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer class="footer">
+    <div class="wrapper footer__wrapper">
+      <div class="footer__copyright">
+        <span class="copyright-sign">&copy</span>
+        <span class="copyright-text">Copyright 2021</span> 
+      </div>
+      <div class="sociam-media">
+        <a class="social-media__icon" href="#">
+          <img src="./assets/img/ico-facebook--nocircle.svg" alt="facebook">
+        </a>
+        <a class="social-media__icon" href="#">
+          <img src="./assets/img/ico-google-plus--nocircle.svg" alt="google">
+        </a>
+        <a class="social-media__icon" href="#">
+          <img src="./assets/img/ico-twitter--nocircle.svg" alt="twitter">
+        </a>
+        <a class="social-media__icon" href="#">
+          <img src="./assets/img/ico-linkedin--nocircle.svg" alt="linkedin">
+        </a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
