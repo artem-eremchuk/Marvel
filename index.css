@@ -79,6 +79,17 @@ lI {
   display: flex; 
 }
 
+.nav__list-item {
+  margin-left: 5.5px;
+}
+
+.nav__list-item::before {
+  content: "\2022";
+  color: #FFFFFF;
+  padding: 0 10px;
+  font-size: 9px;
+}
+
 .nav__list-item-link {
   font-family: Lato;
   font-style: normal;
@@ -95,13 +106,17 @@ lI {
   color: #F06C64;
 }
 
-.nav__list-item-link::before {
+/* .nav__list-item-link::before {
   content: "\00b7";
   color: #FFFFFF;
   padding: 0 15px;
-} 
+}  */
 
-.nav__list-item-link-first::before {
+.nav__list-item-link::before:hover {
+  color: transparent;
+}
+
+.nav__list-item-first::before {
   content: "";
   color: transparent;
   padding: 0;
@@ -152,10 +167,10 @@ lI {
   background-image: url("./assets/img/vertical-phone.svg");
   background-repeat: no-repeat;
   background-size: cover;
-  top: 0%;
+  top: -1%;
   left: 0;
   width: 90%;
-  height: 94.8240%;
+  height: 95.8240%;
   z-index: 2;
 }
 
@@ -177,8 +192,8 @@ lI {
   background-repeat: no-repeat;
   background-size: cover;
   width: 78.3333%;
-  height: 68.9440%;
-  top: 13.4575%;
+  height: 69.9440%;
+  top: 12.4575%;
   left: 6.0416%;
   z-index: 3;
 } 
@@ -258,7 +273,7 @@ lI {
 .out-services__wrapper {
   max-width: 1020px;
   margin: 0 auto;
-  padding: 59px 40px 25px;
+  padding: 59px 40px 24px;
 }
 
 .title {
@@ -296,7 +311,7 @@ lI {
 .our-services__advantages-item {
   display: flex;
   width: 31.9148%;
-  margin-bottom: 31px;
+  margin-bottom: 24px;
 }
 
 .mr {
@@ -305,6 +320,7 @@ lI {
 
 .our-services__advantages-item-desc {
   margin-left: 20px;
+  width: 73.3333%;
 }
 
 .our-services__advantages-item-desc-title {
@@ -321,6 +337,8 @@ lI {
 }
 
 .our-services__advantages-item-desc-text {
+  height: 72px;
+  overflow: hidden;
   margin-top: 10px;
   font-family: Lato;
   font-style: normal;
@@ -343,7 +361,7 @@ lI {
 .portfolio__wrapper {
   max-width: 1020px;
   margin: 0 auto;
-  padding: 55px 40px 54px;
+  padding: 60px 40px 73px;
 }
 
 .portfolio__description {
@@ -386,7 +404,9 @@ lI {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 18px;
+  margin-top: 16px;
+  height: 58.9215vw;
+  overflow: hidden;
 }
 
 .portfolio__img-block-img {
@@ -403,7 +423,7 @@ lI {
 }
 
 .about-us__wrapper {
-  padding: 57px 40px 48.98px;
+  padding: 60px 40px 48.98px;
 }
 
 .about-us_title {
@@ -418,7 +438,7 @@ lI {
 .staff {
   display: flex;
   justify-content: space-between;
-  margin-top: 43px;
+  margin-top: 42px;
 }
 
 .employee {
@@ -435,13 +455,16 @@ lI {
 }
 
 .employee__name {
-  margin-top: 14px;
+  margin-top: 13px;
   font-family: Lato;
   font-style: normal;
   font-weight: 900;
   font-size: 18px;
   line-height: 18px;
-  color: #666D89
+  color: #666D89;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .employee__description {
@@ -478,7 +501,7 @@ lI {
 }
 
 .get-quote__wrapper {
-  padding: 60px 40px 64px;
+  padding: 58px 40px 64px;
 }
 
 .get-quote__title {
@@ -498,7 +521,7 @@ lI {
   font-size: 18px;
   line-height: 30px;
   color: #F0D8D9;
-  margin-bottom: 44px;
+  margin-bottom: 45px;
 }
 
 .form-block {
@@ -516,20 +539,29 @@ lI {
 
 .form-block__input {
   width: 100%;
-  padding: 12px 14px;
+  padding: 11px 14px;
   margin-bottom: 15px;
   background-color: #D6564F;
-  border: 0;
+  border: 1px solid transparent;
   border-radius: 5px;
   outline: none;
   color: #F48C8F;
 }
 
+.form-block__input:valid:not(:placeholder-shown) {
+  border: 1px solid transparent;
+}
+
+.form-block__input:invalid:not(:placeholder-shown) {
+  border: 1px solid #F48C8F;
+}
+
 .form-block__textarea {
-  padding: 11.49px 14px 120.01px;
-  margin-bottom: 8px;
+  padding: 11.49px 14px 116.01px;
+  margin-bottom: 11px;
   outline: none;
   color: #F48C8F;
+  resize: none;
 }
 
 .form-block__input::placeholder {
@@ -555,7 +587,6 @@ lI {
   line-height: 17px;
   color: #886A30;
   cursor: pointer;
-  pointer-events: stroke;
 }
 
 .form-block__info-title {
@@ -636,6 +667,11 @@ lI {
     height: 240px;
     width: 480px;
   }
+
+  .portfolio__img-block {
+    height: 601px;
+    overflow: hidden;
+  }
 }
 
 @media (max-width: 768px){
@@ -656,9 +692,34 @@ lI {
     height: 47.3529vw;
   }
 
+  .vertical-phone__img {
+    width: 90%;
+    height: 94.824%;
+    top: 0%;
+    left: 0px;
+  }
+
+  .vertical-phone__display {
+    width: 78%;
+    height: 69%;
+    top: 13.4575%;
+    left: 6.1416%;
+  }
+
   .horizontal-phone {
     height: 23.5294vw;
     width: 47.3529vw;
+  }
+
+  .horizontal-phone__img {
+    top: -49%;
+  }
+
+  .horizontal-phone__display {;
+    width: 68.9440%;
+    height: 78.3333%;
+    top: 7.1236%;
+    left: 12.3223%;
   }
 
   .out-services__wrapper {
@@ -675,20 +736,23 @@ lI {
 
   .our-services__advantages-item {
     width: 43.6681%;
-    margin-bottom: 51px;
+    margin-bottom: 44px;
   }
 
  /* portfolip */
   .portfolio__wrapper {
-    padding: 60px 40px 54px;
+    padding: 60px 40px 73px;
   }
 
   .portfolio__description {
-    margin-top: 14px;
+    margin-top: 18px;
+    letter-spacing: 0.3px;
   }
 
   .portfolio__img-block {
     margin-top: 27px;
+    height: 103.38545vw;
+    overflow: hidden;
   }
   
   .portfolio__img-block-img{
@@ -697,11 +761,11 @@ lI {
   }
 
   .about-us__wrapper {
-    padding: 53px 40px 62.98px;
+    padding: 53px 40px 64.98px;
   }
 
   .staff {
-    margin-top: 37px;
+    margin-top: 35px;
   }
 
   .employee__name {
@@ -721,8 +785,13 @@ lI {
   }
 
   .get-quote__wrapper {
-    padding: 54px 40px 44px;
+    padding: 53px 40px 45px;
   }
+
+  .get-quote__title {
+    letter-spacing: 0.5px;
+    margin-bottom: 18.01px;
+}
 
   .get-quote__description {
     margin-bottom: 23px;
@@ -739,7 +808,7 @@ lI {
   .form-block__input {
     width: 97%;
     margin-bottom: 11px;
-    padding: 12px 8px;
+    padding: 11px 8px;
   }
 
   .form-block__btn {
@@ -747,12 +816,12 @@ lI {
   }
 
   .form-block__textarea {
-    padding: 11.49px 8px 120.01px;
-    margin-bottom: 12px;
+    padding: 11.49px 8px 116.01px;
+    margin-bottom: 14px;
   }
 
   .footer__wrapper {
-    padding: 14px 35px 11px 42px;
+    padding: 13px 35px 11px 39px;
   }
 
 }

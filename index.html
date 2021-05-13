@@ -19,8 +19,8 @@
       </div>
       <nav class="nav">
         <ul class="nav__list">
-          <li class="nav__list-item">
-            <a href="" class="nav__list-item-link nav__list-item-link-first active">Home</a>
+          <li class="nav__list-item nav__list-item-first">
+            <a href="" class="nav__list-item-link  active">Home</a>
           </li>
           <li class="nav__list-item">
             <a href="" class="nav__list-item-link">Services</a>
@@ -151,6 +151,10 @@
         <img class="portfolio__img-block-img" src="./assets/img/portfolio-10.svg" alt="portfolio-img-10">
         <img class="portfolio__img-block-img" src="./assets/img/portfolio-11.svg" alt="portfolio-img-11">
         <img class="portfolio__img-block-img" src="./assets/img/portfolio-12.svg" alt="portfolio-img-12">
+        <img class="portfolio__img-block-img" src="./assets/img/portfolio-1.svg" alt="portfolio-img-1">
+        <img class="portfolio__img-block-img" src="./assets/img/portfolio-2.svg" alt="portfolio-img-2">
+        <img class="portfolio__img-block-img" src="./assets/img/portfolio-3.svg" alt="portfolio-img-3">
+        <img class="portfolio__img-block-img" src="./assets/img/portfolio-4.svg" alt="portfolio-img-4">
       </div>
     </div>
   </section>
@@ -238,8 +242,8 @@
       <div class="form-block">
         <div class="form-block__form">
           <form action="#" id="get-quote">
-            <input type="text" class="form-block__input" placeholder="Name (required)">
-            <input type="text" class="form-block__input" placeholder="Email (required)">
+            <input type="text" name="name" class="form-block__input" placeholder="Name (required)" pattern="^[a-zA-Z]+$" required>
+            <input type="email" name="email" class="form-block__input" placeholder="Email (required)" required>
             <input type="text" class="form-block__input" placeholder="Subject">
             <textarea type="text" class="form-block__input form-block__textarea" placeholder="Describe your project in detail..."></textarea>
             <button tupe="submit" form="get-quote" class="form-block__btn">Send</button>
