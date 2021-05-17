@@ -1,0 +1,120 @@
+.portfolio {
+  width: 100%;
+  background-color: #2D303A;
+  color: #666D89;
+  border-bottom: 1px solid #2D303A;;
+}
+
+.portfolio__wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 60px 40px 73px;
+}
+
+.portfolio__description {
+  margin-top: 18px;
+}
+
+.portfolio__filter-buttons-block {
+  display: flex;
+  margin-top: 13px;
+}
+
+.portfolio__button {
+  margin-right: 10px;
+  padding: 4px 6px;
+  background-color: transparent;
+  color: #767E9E;
+  border: 1px solid #767E9E;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.portfolio__button:hover{
+  border: 1px solid #DEDEDE;
+  color: #DEDEDE;
+}
+
+.active-button {
+  border: 1px solid #DEDEDE;
+  color: #DEDEDE;
+}
+
+.portfolio__img-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 16px;
+  height: 58.9215vw;
+  overflow: hidden;
+}
+
+.portfolio__img-block-img {
+  width: 23.4045%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+@media(min-width: 1020px){
+  .portfolio__img-block {
+    height: 601px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px){
+  .portfolio__wrapper {
+    padding: 60px 40px 73px;
+  }
+
+  .portfolio__description {
+    margin-top: 18px;
+    letter-spacing: 0.3px;
+  }
+
+  .portfolio__img-block {
+    margin-top: 27px;
+    height: 103.38545vw;
+    overflow: hidden;
+  }
+  
+  .portfolio__img-block-img{
+    width: 31.3841%;
+    height: auto;
+  }
+}
+
+@media (max-width: 375px){
+  .portfolio__wrapper {
+    padding: 41px 30px 31px;
+  }
+
+  .portfolio__description {
+    letter-spacing: 0px;
+  }
+
+  .portfolio__filter-buttons-block {
+    margin-top: 18px;
+    margin-left: 0;
+  }
+
+  .portfolio__img-block {
+    margin-top: 23px;
+  }
+
+  .portfolio__img-block-img {
+    width: 47.7841%;
+    margin-bottom: 14px;
+  }
+
+  .portfolio__img-block {
+    height: 150.38545vw;
+  }
+}

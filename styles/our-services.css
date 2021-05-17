@@ -1,0 +1,142 @@
+.our-services {
+  width: 100%;
+  background: #F2F2F2;
+  border-bottom: 7px solid #F2F2F2;
+}
+
+.out-services__wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 59px 40px 24px;
+}
+
+.title {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 36px;
+}
+
+.our-servicer_title {
+  color: #666D89;
+}
+
+.description {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.our-services_description {
+  margin-top: 18px;
+  color: #767E9E;
+}
+
+.our-services__advantages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 48px;
+}
+
+.our-services__advantages-item {
+  display: flex;
+  width: 31.9148%;
+  margin-bottom: 24px;
+}
+
+.mr {
+  margin-right: 0;
+}
+
+.our-services__advantages-item-desc {
+  margin-left: 20px;
+  width: 73.3333%;
+}
+
+.our-services__advantages-item-desc-title {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 18px;
+  color: #666D89;
+}
+
+.our-services__advantages-item-desc-title_support{
+  letter-spacing: 0.5px;
+}
+
+.our-services__advantages-item-desc-text {
+  height: 72px;
+  overflow: hidden;
+  margin-top: 10px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: justify;
+  color: #767E9E;
+}
+
+@media (max-width: 768px){
+  .out-services__wrapper {
+    padding: 42px 40px 13px;
+  }
+
+  .our-services__advantages {
+    margin-top: 37px;
+  }
+
+  .mr {
+    margin-right: 34px;
+  }
+
+  .our-services__advantages-item {
+    width: 43.6681%;
+    margin-bottom: 44px;
+  }
+}
+
+@media (max-width: 575px){
+  .our-services__advantages {
+    flex-direction: column;
+  }
+
+  .our-services__advantages-item {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 375px){
+  .out-services__wrapper {
+    padding: 26px 32px 11px;
+  }
+
+  .our-services__advantages {
+    margin-top: 30px;
+    flex-direction: column;
+  }
+
+  .our-services__advantages-item {
+    width: 96%;
+    margin-bottom: 19px;
+  }
+
+  .our-services__advantages-item-desc-title_support {
+    letter-spacing: 0.4px;
+  }
+
+  .mr {
+    margin-right: 0;
+  }
+
+  .mb {
+    margin-bottom: 0;
+  }
+}

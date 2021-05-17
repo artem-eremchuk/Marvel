@@ -1,0 +1,258 @@
+.slider {
+  width: 100%;
+  background-color: #F06C64;
+}
+
+.slider__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 600px;
+  padding: 0 40px 0 40px;
+}
+
+.slider__header {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(0px 0px 99.9% 99.9%);
+  clip-path: inset(0px 0px 99.9% 99.9%);
+  overflow: hidden;
+  height: 1px;
+  width: 1px;
+  padding: 0;
+  border: 0;
+}
+
+.vertical-phone {
+  position: relative;
+  top: -0.5%;
+  left: 1%;
+  width: 23.5294vw;
+  height: 47.3529vw;
+}
+
+.vertical-phone__img {
+  position: absolute;
+  background-image: url("/assets/img/vertical-phone.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: -1%;
+  left: 0;
+  width: 90%;
+  height: 95.8240%;
+  z-index: 2;
+}
+
+.vertical-phone__shadow {
+  position: absolute;
+  background-image: url("/assets/img/phone-vertical-shadow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.vertical-phone__display {
+  position: absolute;
+  background-image: url("/assets/img/phone-vertical-display.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 78.3333%;
+  height: 69.9440%;
+  top: 12.4575%;
+  left: 6.0416%;
+  z-index: 3;
+} 
+
+.horizontal-phone {
+  position: relative;
+  width: 47.3529vw;
+  height: 23.5294vw;
+  margin-left: 10%;
+  top: -0.7%;
+  right: 1.1%; 
+}
+
+.horizontal-phone__img {
+  position: absolute;
+  background-image: url("/assets/img/vertical-phone.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotate(90deg);
+  top: -50%;
+  left: 25%;
+  width: 44.7204%; 
+  height: 190.8333%; 
+  z-index: 2;
+}
+
+.horizontal-phone__shadow{
+  position: absolute;
+  background-image: url("/assets/img/phone-horizontal-shadow.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.horizontal-phone__display {
+  position: absolute;
+  background-image: url("/assets/img/phone-horizontal-display.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 68.9440%;
+  height: 78.3333%;
+  top: 6.1236%;
+  left: 12.4223%;
+  z-index: 3;
+} 
+
+.left-arrow, .right-arrow {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.left-arrow {
+  top: 50%;
+  margin-top: -1.8%;
+  left: 35px;
+}
+
+.right-arrow {
+  top: 50%;
+  margin-top: -1.8%;
+  right: 35px;
+}
+
+@media(min-width: 1020px){
+  .vertical-phone {
+    width: 240px;
+    height: 480px;
+  }
+
+  .horizontal-phone {
+    height: 240px;
+    width: 480px;
+  }
+}
+
+@media (max-width: 768px){
+  .right-arrow {
+    right: 21px;
+  }
+
+  .left-arrow {
+    left: 23px;
+  }
+
+  .slider__wrapper {
+    height: 451.76px;
+  }
+
+  .vertical-phone {
+    width: 23.5294vw;
+    height: 47.3529vw;
+  }
+
+  .vertical-phone__img {
+    width: 90%;
+    height: 94.824%;
+    top: 0%;
+    left: 0px;
+  }
+
+  .vertical-phone__display {
+    width: 78%;
+    height: 69%;
+    top: 13.4575%;
+    left: 6.1416%;
+  }
+
+  .horizontal-phone {
+    height: 23.5294vw;
+    width: 47.3529vw;
+  }
+
+  .horizontal-phone__img {
+    top: -49%;
+  }
+
+  .horizontal-phone__display {
+    width: 68.9440%;
+    height: 78.3333%;
+    top: 7.1236%;
+    left: 12.3223%;
+  }
+}
+
+@media (max-width: 600px){
+  .slider__wrapper {
+    height: 350px;
+  }
+}
+
+@media (max-width: 575px){
+  .slider__wrapper {
+    height: 320px;
+  }
+
+  .left-arrow {
+    left: 10px;
+    margin-top: -3.8%;
+  }
+
+  .right-arrow {
+    right: 10px;
+    margin-top: -3.8%;
+  }
+}
+
+@media (max-width: 430px){
+  .vertical-phone {
+    left: 0%;
+  }
+
+  .vertical-phone__display {
+    left: 7.1416%;
+  }
+
+  .horizontal-phone__display {
+    left: 12.9223%;
+  }
+}
+
+@media (max-width: 375px){
+  .slider__wrapper {
+    height: 221.38px;
+  }
+
+  .left-arrow {
+    left: 3px;
+    margin-top: -3.8%;
+  }
+
+  .right-arrow {
+    right: 3px;
+    margin-top: -3.8%;
+  }
+
+  .vertical-phone {
+    left: 0%;
+  }
+
+  .vertical-phone__display {
+    left: 7.1416%;
+  }
+
+  .horizontal-phone__display {
+    left: 12.9223%;
+  }
+}

@@ -1,0 +1,105 @@
+.header {
+  width: 100%;
+  background-color: #2D303A;
+  border-bottom: solid 7px #323746;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 29px 40px 29px 40px;
+}
+
+.logo__text {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.logo__star {
+  margin-left: -3px;
+  color: #F06C64;
+}
+
+.nav__list {
+  display: flex; 
+}
+
+.nav__list-item {
+  margin-left: 5.5px;
+}
+
+.nav__list-item::before {
+  content: "\2022";
+  color: #FFFFFF;
+  padding: 0 10px;
+  font-size: 9px;
+}
+
+.nav__list-item-link {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14.4px;
+  letter-spacing: 3.5%;
+  letter-spacing: -0.035em;
+  letter-spacing: -0.39px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.nav__list-item-link:hover {
+  color: #F06C64;
+}
+
+.nav__list-item-link::before:hover {
+  color: transparent;
+}
+
+.nav__list-item-first::before {
+  content: "";
+  color: transparent;
+  padding: 0;
+}
+
+.active {
+  color: #F06C64;
+}
+
+@media (max-width: 768px){
+  .header__wrapper {
+    padding: 27px 40px 31px 40px;
+  }
+}  
+
+@media (max-width: 600px){
+  .logo {
+    margin: 0 auto;
+  }
+
+  .nav__list {
+    display: none;
+  }
+}
+
+@media (max-width: 375px){
+  .header {
+    border-bottom: none;
+  }
+
+  .header__wrapper {
+    padding: 20px 40px 20px 40px;
+  }
+
+  .logo__text {
+    margin-right: -3px;
+    font-size: 20px;
+  }
+}
