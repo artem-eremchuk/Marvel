@@ -1,5 +1,7 @@
 const logo = document.querySelector('.logo');
 const cover = document.querySelector('.cover');
+const header = document.querySelector('.header');
+const sections = document.querySelectorAll('.section');
 const iconBurgerBtn = document.querySelector('.icon-burger');
 const menuLinks = document.querySelectorAll('.nav__list-item-link ');
 const sidebarMenu = document.querySelector('.nav');
@@ -21,9 +23,51 @@ iconBurgerBtn.addEventListener('click', () => {
   }
 })
 
-menuLinks.forEach((el) => {
-  el.addEventListener('click', (e) => {
-    menuLinks.forEach(link => link.classList.remove('active'))
-    el.classList.add('active');
+// Смена активной ссылки при скроллинге
+const changeActiveLinkWhenScrolling = () => {
+  let scrollDistance = window.scrollY;
+
+  sections.forEach((section, index) => {
+    if((section.offsetTop - header.clientHeight) <= scrollDistance){
+      menuLinks.forEach((link) => {
+        if(link.classList.contains('active')){
+          link.classList.remove('active');
+        }
+      })
+
+      menuLinks[index].classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', changeActiveLinkWhenScrolling)
+
+// Плавный скроллинг при клике
+menuLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+    window.addEventListener('scroll', changeActiveLinkWhenScrolling);
+
+    event.preventDefault();
+
+    const blockID = event.target.getAttribute('href').slice(1);
+  
+    document.getElementById(blockID).scrollIntoView({
+      behavior: "smooth", 
+      block: "start"
+    })
+  })
+})
+
+// Смена активной ссылки по клику
+menuLinks.forEach((link) => {
+  link.addEventListener('click', (event) => {
+
+    // Отменяю смену активной ссылки при скроллинге
+    window.removeEventListener('scroll', changeActiveLinkWhenScrolling);
+
+    event.preventDefault();
+
+    menuLinks.forEach(link => link.classList.remove('active'));
+    link.classList.add('active');
   })
 })

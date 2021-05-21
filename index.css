@@ -24,6 +24,7 @@
 
 * {
   box-sizing: border-box;
+  scroll-margin-top: 94px;
 }
 
 body, ul, h1, h2, h3, h4, p, a {
@@ -42,4 +43,10 @@ lI {
 .wrapper {
   margin: 0 auto;
   max-width: 1020px;
+}
+
+@media (max-width: 375px){
+  * {
+    scroll-margin-top: 70px;
+  }
 }
