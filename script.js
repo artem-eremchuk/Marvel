@@ -23,51 +23,22 @@ iconBurgerBtn.addEventListener('click', () => {
   }
 })
 
-// Смена активной ссылки при скроллинге
-const changeActiveLinkWhenScrolling = () => {
+const changeActiveMenu = (e) => {
   let scrollDistance = window.scrollY;
 
   sections.forEach((section, index) => {
-    if((section.offsetTop - header.clientHeight) <= scrollDistance){
+    if((section.offsetTop - header.offsetHeight) <= scrollDistance){
       menuLinks.forEach((link) => {
-        if(link.classList.contains('active')){
-          link.classList.remove('active');
-        }
+        link.classList.remove('active');
       })
-
+      
       menuLinks[index].classList.add('active');
     }
-  });
+  })
 }
 
-window.addEventListener('scroll', changeActiveLinkWhenScrolling)
+document.addEventListener('scroll', changeActiveMenu);
 
-// Плавный скроллинг при клике
 menuLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-    window.addEventListener('scroll', changeActiveLinkWhenScrolling);
-
-    event.preventDefault();
-
-    const blockID = event.target.getAttribute('href').slice(1);
-  
-    document.getElementById(blockID).scrollIntoView({
-      behavior: "smooth", 
-      block: "start"
-    })
-  })
-})
-
-// Смена активной ссылки по клику
-menuLinks.forEach((link) => {
-  link.addEventListener('click', (event) => {
-
-    // Отменяю смену активной ссылки при скроллинге
-    window.removeEventListener('scroll', changeActiveLinkWhenScrolling);
-
-    event.preventDefault();
-
-    menuLinks.forEach(link => link.classList.remove('active'));
-    link.classList.add('active');
-  })
+  link.addEventListener('click', changeActiveMenu);
 })

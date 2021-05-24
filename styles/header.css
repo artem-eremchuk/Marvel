@@ -78,10 +78,6 @@
   color: #FFFFFF;
 }
 
-.nav__list-item-link:hover {
-  color: #F06C64;
-}
-
 .nav__list-item-link::before:hover {
   color: transparent;
 }
