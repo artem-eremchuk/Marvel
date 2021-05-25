@@ -208,7 +208,7 @@
   height: 50.4vw;
   width: 25vw;
   right: 37.7%;
-  z-index: 5000;
+  z-index: 4000;
 }
 
 .slide__item, .slide__item_hidden {

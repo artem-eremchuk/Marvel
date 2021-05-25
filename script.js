@@ -97,7 +97,7 @@ const moveToPrevSlide = () => {
   updateSlidePosition();
 }
 
-const updateVerticalDisplay = () => {
+const updateVerticalDisplay = (e) => {
   if(verticalPhoneDisplay.classList.contains('displays')){
     verticalPhoneDisplay.classList.remove('displays');
   } else {
