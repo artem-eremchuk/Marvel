@@ -45,57 +45,58 @@ menuLinks.forEach((link) => {
 
 // Slider
 const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide__item');
-const totalSlides = slides.length;
-const slideLeftArrow = document.querySelector('.left-arrow');
-const slideRightAroow = document.querySelector('.right-arrow');
-const phones = document.querySelectorAll('.phones')
 const verticalPhone = document.querySelector('.vertical-phone__img');
 const horizontalPhone = document.querySelector('.horizontal-phone__img');
 const verticalPhoneDisplay = document.querySelector('.vertical-phone__display');
 const horizontalPhoneDisplay = document.querySelector('.horizontal-phone__display');
-let slidePosition = 0;
 
-const updateSlidePosition = () => {
-  for (let slide of slides){
-    slide.classList.remove('slide__item_visible');
-    slide.classList.add('slide__item_hidden');
+const sliderWrapper = document.querySelector('.slider__wrapper');
+const sliderContainer = document.querySelector('.slides__container');
+const slideLeftArrow = document.querySelector('.left-arrow');
+const slideRightAroow = document.querySelector('.right-arrow');
+let direction = -1;
+
+slideRightAroow.addEventListener('click', () => {
+  if(direction === 1){
+    sliderContainer.prepend(sliderContainer.lastElementChild);
+    sliderWrapper.style.justifyContent = 'flex-start';
+    direction = -1;
+  } 
+
+  sliderContainer.style.transform = 'translate(-50%)';
+  slider.classList.toggle('change-slide');
+  slideRightAroow.classList.toggle('change-slide');
+  slideLeftArrow.classList.toggle('change-slide');
+});
+
+slideLeftArrow.addEventListener('click', () => {
+  if (direction === -1) {
+    direction = 1;
+    sliderContainer.appendChild(sliderContainer.firstElementChild);
   }
 
-  slides[slidePosition].classList.add('slide__item_visible');
-}
+  sliderWrapper.style.justifyContent = 'flex-end';
+  sliderContainer.style.transform = 'translate(50%)';
+  slider.classList.toggle('change-slide');
+  slideRightAroow.classList.toggle('change-slide');
+  slideLeftArrow.classList.toggle('change-slide');
+});
 
-const moveToNextSlide = () => {
-  if(slidePosition === totalSlides - 1){
-    slidePosition = 0;
-    slider.classList.remove('change-slide');
-    slideLeftArrow.classList.remove('change-slide');
-    slideRightAroow.classList.remove('change-slide');
+
+sliderContainer.addEventListener('transitionend', () => {
+  if(direction === 1){
+    sliderContainer.prepend(sliderContainer.lastElementChild);
   } else {
-    slidePosition++;
-    slider.classList.add('change-slide');
-    slideLeftArrow.classList.add('change-slide');
-    slideRightAroow.classList.add('change-slide');
+    sliderContainer.appendChild(sliderContainer.firstElementChild);
   }
 
-  updateSlidePosition();
-}
-
-const moveToPrevSlide = () => {
-  if(slidePosition === 0){
-    slidePosition = totalSlides - 1;
-    slider.classList.add('change-slide');
-    slideLeftArrow.classList.add('change-slide');
-    slideRightAroow.classList.add('change-slide');
-  } else {
-    slidePosition--;
-    slider.classList.remove('change-slide');
-    slideLeftArrow.classList.remove('change-slide');
-    slideRightAroow.classList.remove('change-slide');
-  }
-
-  updateSlidePosition();
-}
+  sliderContainer.style.transition = 'none';
+  sliderContainer.style.transform = 'translate(0)';
+  setTimeout(() => {
+    sliderContainer.style.transition = '1s';
+    
+  })
+}, false);
 
 const updateVerticalDisplay = (e) => {
   if(verticalPhoneDisplay.classList.contains('displays')){
@@ -113,7 +114,7 @@ const updateHorizontalDisplay = () => {
   }
 }
 
-slideRightAroow.addEventListener('click', moveToNextSlide);
-slideLeftArrow.addEventListener('click', moveToPrevSlide);
 verticalPhone.addEventListener('click', updateVerticalDisplay);
 horizontalPhone.addEventListener('click', updateHorizontalDisplay);
+
+

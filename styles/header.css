@@ -1,6 +1,6 @@
 .header {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   background-color: #2D303A;
   border-bottom: solid 7px #323746;
   z-index: 5000;
