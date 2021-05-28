@@ -168,24 +168,24 @@
         nisi erat porttitor ligula, eget lacinia odio sem nec elit.
       </p>
       <div class="portfolio__filter-buttons-block">
-        <button class="portfolio__button active-button">All</button>
-        <button class="portfolio__button">Web Design</button>
-        <button class="portfolio__button">Graphic Design</button>
-        <button class="portfolio__button">Artwork</button>
+        <button class="portfolio__button data-all">All</button>
+        <button class="portfolio__button data-web-design">Web Design</button>
+        <button class="portfolio__button data-graphic-design">Graphic Design</button>
+        <button class="portfolio__button data-artwork">Artwork</button>
       </div>
       <div class="portfolio__img-block">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-1.svg" alt="portfolio-img-1">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-2.svg" alt="portfolio-img-2">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-3.svg" alt="portfolio-img-3">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-4.svg" alt="portfolio-img-4">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-5.svg" alt="portfolio-img-5">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-6.svg" alt="portfolio-img-6">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-7.svg" alt="portfolio-img-7">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-8.svg" alt="portfolio-img-8">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-9.svg" alt="portfolio-img-9">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-10.svg" alt="portfolio-img-10">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-11.svg" alt="portfolio-img-11">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-12.svg" alt="portfolio-img-12">
+        <img id="1" class="portfolio__img-block-img" data-all="1" data-web-design="12" data-graphic-design="6" data-artwork="7" src="./assets/img/portfolio-1.svg" alt="portfolio-img-1">
+        <img id="2" class="portfolio__img-block-img" data-all="2" data-web-design="11" data-graphic-design="5" data-artwork="8" src="./assets/img/portfolio-2.svg" alt="portfolio-img-2">
+        <img id="3" class="portfolio__img-block-img" data-all="3" data-web-design="10" data-graphic-design="4" data-artwork="9" src="./assets/img/portfolio-3.svg" alt="portfolio-img-3">
+        <img id="4" class="portfolio__img-block-img" data-all="4" data-web-design="9" data-graphic-design="3" data-artwork="10" src="./assets/img/portfolio-4.svg" alt="portfolio-img-4">
+        <img id="5" class="portfolio__img-block-img" data-all="5" data-web-design="8" data-graphic-design="2" data-artwork="11" src="./assets/img/portfolio-5.svg" alt="portfolio-img-5">
+        <img id="6" class="portfolio__img-block-img" data-all="6" data-web-design="7" data-graphic-design="1" data-artwork="12" src="./assets/img/portfolio-6.svg" alt="portfolio-img-6">
+        <img id="7" class="portfolio__img-block-img" data-all="7" data-web-design="6" data-graphic-design="12" data-artwork="1" src="./assets/img/portfolio-7.svg" alt="portfolio-img-7">
+        <img id="8" class="portfolio__img-block-img" data-all="8" data-web-design="5" data-graphic-design="11" data-artwork="2" src="./assets/img/portfolio-8.svg" alt="portfolio-img-8">
+        <img id="9" class="portfolio__img-block-img" data-all="9" data-web-design="4" data-graphic-design="10" data-artwork="3" src="./assets/img/portfolio-9.svg" alt="portfolio-img-9">
+        <img id="10" class="portfolio__img-block-img" data-all="10" data-web-design="3" data-graphic-design="9" data-artwork="4" src="./assets/img/portfolio-10.svg" alt="portfolio-img-10">
+        <img id="11" class="portfolio__img-block-img" data-all="11" data-web-design="2" data-graphic-design="8" data-artwork="5" src="./assets/img/portfolio-11.svg" alt="portfolio-img-11">
+        <img id="12" class="portfolio__img-block-img" data-all="12" data-web-design="1" data-graphic-design="7" data-artwork="6" src="./assets/img/portfolio-12.svg" alt="portfolio-img-12">
       </div>
     </div>
   </section>
@@ -288,11 +288,11 @@
       </p>
       <div class="form-block">
         <div class="form-block__form">
-          <form action="#" id="get-quote">
+          <form action="#" id="get-quote-form">
             <input type="text" name="name" class="form-block__input" placeholder="Name (required)" pattern="^[a-zA-Z]+$" required>
             <input type="email" name="email" class="form-block__input" placeholder="Email (required)" required>
-            <input type="text" class="form-block__input" placeholder="Subject">
-            <textarea type="text" class="form-block__input form-block__textarea" placeholder="Describe your project in detail..."></textarea>
+            <input type="text" name="subject" class="form-block__input" placeholder="Subject">
+            <textarea type="text" name="description" class="form-block__input form-block__textarea" placeholder="Describe your project in detail..."></textarea>
             <button tupe="submit" form="get-quote" class="form-block__btn">Send</button>
           </form>
         </div>
@@ -330,6 +330,15 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="modal-window">
+        <div class="modal-window__wrapper"></div>
+        <div class="modal-window__content">
+          <h3 class="modal-window__content-title">Email sent</h3>
+          <p class="modal-window__content-theme"></p>
+          <p class="modal-window__content-description"></p>
+          <button class="modal-window__btn" type="submit">Ok</button>
         </div>
       </div>
     </div>

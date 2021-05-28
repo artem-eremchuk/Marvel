@@ -8,7 +8,7 @@
 .portfolio__wrapper {
   max-width: 1020px;
   margin: 0 auto;
-  padding: 60px 40px 73px;
+  padding: 60px 35px 68px;
 }
 
 .portfolio__description {
@@ -18,6 +18,10 @@
 .portfolio__filter-buttons-block {
   display: flex;
   margin-top: 13px;
+}
+
+.portfolio_title, .portfolio__description, .portfolio__filter-buttons-block {
+  padding-left: 5px;
 }
 
 .portfolio__button {
@@ -37,11 +41,6 @@
   cursor: pointer;
 }
 
-.portfolio__button:hover{
-  border: 1px solid #DEDEDE;
-  color: #DEDEDE;
-}
-
 .active-button {
   border: 1px solid #DEDEDE;
   color: #DEDEDE;
@@ -51,27 +50,33 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 16px;
+  margin-top: 9px;
   height: 58.9215vw;
   overflow: hidden;
 }
 
 .portfolio__img-block-img {
-  width: 23.4045%;
-  height: auto;
-  margin-bottom: 20px;
+  width: 24.4045%;
+  height: fit-content;
+  margin-bottom: 8px;
+  border: 5px solid transparent;
+  cursor: pointer;
+}
+
+.portfolio__img-block-img_border {
+  border: 5px solid #F06C64;
 }
 
 @media(min-width: 1020px){
   .portfolio__img-block {
-    height: 601px;
+    height: 613px;
     overflow: hidden;
   }
 }
 
 @media (max-width: 768px){
   .portfolio__wrapper {
-    padding: 60px 40px 73px;
+    padding: 60px 35px 70px;
   }
 
   .portfolio__description {
@@ -80,20 +85,21 @@
   }
 
   .portfolio__img-block {
-    margin-top: 27px;
-    height: 103.38545vw;
+    margin-top: 23px;
+    height: 104.38545vw;
     overflow: hidden;
   }
   
   .portfolio__img-block-img{
-    width: 31.3841%;
-    height: auto;
+    width: 32.3841%;
+    height: fit-content;
+    margin-bottom: 9px;
   }
 }
 
 @media (max-width: 375px){
   .portfolio__wrapper {
-    padding: 41px 30px 31px;
+    padding: 41px 25px 35px;
   }
 
   .portfolio__description {
@@ -106,12 +112,12 @@
   }
 
   .portfolio__img-block {
-    margin-top: 23px;
+    margin-top: 19px;
   }
 
   .portfolio__img-block-img {
-    width: 47.7841%;
-    margin-bottom: 14px;
+    width: 49.7841%;
+    margin-bottom: 3px;
   }
 
   .portfolio__img-block {
