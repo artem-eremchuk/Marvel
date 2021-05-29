@@ -1,0 +1,151 @@
+.about-us {
+  width: 100%;
+  background-color: #F2F2F2; 
+}
+
+.about-us__wrapper {
+  padding: 60px 40px 48.98px;
+}
+
+.about-us_title {
+  color: #666D89
+}
+
+.about-us_description {
+  margin-top: 19px;
+  color: #767E9E;
+}
+
+.staff {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 42px;
+}
+
+.employee {
+  width: 300px;
+}
+
+.center-block{
+  margin: 0 2.1276%;
+}
+
+.employee__img-picture {
+  width: 100%;
+  height: auto;
+}
+
+.employee__name {
+  margin-top: 13px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 18px;
+  color: #666D89;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.employee__description {
+  margin-top: 10px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 22px;
+  text-align: justify;
+  color: #767E9E;
+}
+
+.sociam-media {
+  display: flex;
+  margin: 23px 0 23px;
+}
+
+.social-media__icon {
+  margin-right: 8px;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border: 1px solid #666D89;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px){
+  .about-us__wrapper {
+    padding: 53px 40px 64.98px;
+  }
+
+  .staff {
+    margin-top: 35px;
+  }
+
+  .employee__name {
+    margin-top: 8px;
+  }
+
+  .employee__description {
+    margin-top: 3px;
+  }
+
+  .sociam-media {
+    margin: 10px 0 10px;
+  }
+
+  .center-block-employee {
+    margin: 0 14.6px;
+  }
+}
+
+@media (max-width: 575px){
+  .about-us__wrapper {
+    padding: 53px 40px 53px;
+  }
+
+  .staff {
+    flex-direction: column;
+  }
+
+  .employee {
+    margin: 0 auto;
+  }
+
+  .sociam-media {
+    margin: 0;
+    padding: 23px 0;
+  }
+}
+
+@media (max-width: 375px){
+  .about-us__wrapper {
+    padding: 35px 31px 10.98px;
+  }
+
+  .staff {
+    flex-direction: column;
+    margin-top: 24px;
+  }
+
+  .employee {
+    width: 313px;
+  }
+
+  .employee__name {
+    margin-top: 15px;
+  }
+
+  .center-block {
+    margin: 0;
+  }
+
+  .sociam-media {
+    padding: 12px 0 33px 0;
+  }
+
+  .about-us__wrapper {
+    padding: 31px 31px 10.98px;
+  }
+}

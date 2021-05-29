@@ -1,0 +1,126 @@
+.portfolio {
+  width: 100%;
+  background-color: #2D303A;
+  color: #666D89;
+  border-bottom: 1px solid #2D303A;;
+}
+
+.portfolio__wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 60px 35px 68px;
+}
+
+.portfolio__description {
+  margin-top: 18px;
+}
+
+.portfolio__filter-buttons-block {
+  display: flex;
+  margin-top: 13px;
+}
+
+.portfolio_title, .portfolio__description, .portfolio__filter-buttons-block {
+  padding-left: 5px;
+}
+
+.portfolio__button {
+  margin-right: 10px;
+  padding: 4px 6px;
+  background-color: transparent;
+  color: #767E9E;
+  border: 1px solid #767E9E;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-family: Lato;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.active-button {
+  border: 1px solid #DEDEDE;
+  color: #DEDEDE;
+}
+
+.portfolio__img-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 9px;
+  height: 58.9215vw;
+  overflow: hidden;
+}
+
+.portfolio__img-block-img {
+  width: 24.4045%;
+  height: fit-content;
+  margin-bottom: 8px;
+  border: 5px solid transparent;
+  cursor: pointer;
+}
+
+.portfolio__img-block-img_border {
+  border: 5px solid #F06C64;
+}
+
+@media(min-width: 1020px){
+  .portfolio__img-block {
+    height: 613px;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 768px){
+  .portfolio__wrapper {
+    padding: 60px 35px 70px;
+  }
+
+  .portfolio__description {
+    margin-top: 18px;
+    letter-spacing: 0.3px;
+  }
+
+  .portfolio__img-block {
+    margin-top: 23px;
+    height: 104.38545vw;
+    overflow: hidden;
+  }
+  
+  .portfolio__img-block-img{
+    width: 32.3841%;
+    height: fit-content;
+    margin-bottom: 9px;
+  }
+}
+
+@media (max-width: 375px){
+  .portfolio__wrapper {
+    padding: 41px 25px 35px;
+  }
+
+  .portfolio__description {
+    letter-spacing: 0px;
+  }
+
+  .portfolio__filter-buttons-block {
+    margin-top: 18px;
+    margin-left: 0;
+  }
+
+  .portfolio__img-block {
+    margin-top: 19px;
+  }
+
+  .portfolio__img-block-img {
+    width: 49.7841%;
+    margin-bottom: 3px;
+  }
+
+  .portfolio__img-block {
+    height: 150.38545vw;
+  }
+}

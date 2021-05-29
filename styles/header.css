@@ -1,0 +1,257 @@
+.header {
+  position: fixed;
+  width: 100vw;
+  background-color: #2D303A;
+  border-bottom: solid 7px #323746;
+  z-index: 5000;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 29px 40px 29px 40px;
+}
+
+.cover {
+  transform: translateX(-105%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #2D303A;
+  opacity: 0.6;
+  transition: 2s;
+}
+
+.cover.open {
+  transform: translateX(0);
+  transition: 2s;
+}
+
+.icon-burger{
+  display: none;
+}
+
+.logo__text {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 30px;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.logo__star {
+  margin-left: -3px;
+  color: #F06C64;
+}
+
+.nav__list {
+  display: flex; 
+}
+
+.nav__list-item {
+  margin-left: 5.5px;
+}
+
+.nav__list-item::before {
+  content: "\2022";
+  color: #FFFFFF;
+  padding: 0 10px;
+  font-size: 9px;
+}
+
+.nav__list-item-link {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14.4px;
+  letter-spacing: 3.5%;
+  letter-spacing: -0.035em;
+  letter-spacing: -0.39px;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+.nav__list-item-link::before:hover {
+  color: transparent;
+}
+
+.nav__list-item-first::before {
+  content: "";
+  color: transparent;
+  padding: 0;
+}
+
+.active {
+  color: #F06C64;
+}
+
+@media (max-width: 768px){
+  .header__wrapper {
+    padding: 27px 40px 31px 40px;
+  }
+}  
+
+@media (max-width: 600px){
+  .header__wrapper {
+    justify-content: stretch;
+    align-items: center;
+  }
+
+  .logo {
+    margin-left: 36%;
+    z-index: 5000;
+    transition: 2s;
+  }
+
+  .logo__text {
+    padding-top: 0;
+  }
+
+  .logo.open {
+    margin-left: 9.5%;
+    transition: 2s;
+  }
+
+  .icon-burger {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    width: 25px;
+    cursor: pointer;
+    z-index: 5000;
+  }
+
+  .icon-burger-item {
+    position: absolute;
+    top: 7px;
+    height: 2.4px;
+    width: 25px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    transition: 1s;
+  }
+
+  .icon-burger-item::after, 
+  .icon-burger-item::before {
+    content: '';
+    position: absolute;
+    height: 2.4px;
+    width: 25px;
+    background: #FFFFFF;
+    border-radius: 5px;
+    transition: 1s;
+  }
+
+  .icon-burger-item::after {
+    transform: translateY(-9px);
+  }
+
+  .icon-burger-item::before {
+    transform: translateY(9px);
+  }
+
+  .icon-burger.open .icon-burger-item {
+    background: transparent;
+    transition: 1s;
+  }
+
+  .icon-burger.open .icon-burger-item::before {
+    transform: rotate(45deg);
+    transition: 1s;
+  }
+
+  .icon-burger.open .icon-burger-item::after {
+    transform: rotate(-45deg);
+    transition: 1s;
+  }
+
+  .nav {
+    transform: translateX(-105%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: start;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 74%;
+    background: #2D303A;
+    box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+    transition: 2s;
+  }
+
+  .nav.open {
+    transform: translateX(0);
+    transition: 2s;
+  }
+
+  .nav__list {
+    display: block;
+    height: 260px;
+  }
+
+  .nav__list-item::before {
+    content: none;
+  }
+
+  .nav__list-item {
+    margin-top: 10.5%;
+    margin-left: 26%;
+  }
+
+  .nav__list-item-link {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: -0.035em;
+    color: #FFFFFF;
+  }
+
+  .active {
+    color: #F06C64;
+  }
+}
+
+@media (max-width: 500px){
+  .logo {
+    margin-left: 32%;
+  }
+}
+
+@media (max-width: 375px){
+  .header {
+    border-bottom: none;
+  }
+
+  .header__wrapper {
+    padding: 22px 37px 18px 20px;
+    justify-content: stretch;
+  }
+
+  .logo {
+    margin-left: 32%;
+  }
+
+  .logo.open {
+    margin-left: 8%; 
+    transition: 2s;
+  }
+
+  .logo__text {
+    padding-right: 6px;
+    font-size: 20px;
+    letter-spacing: -1px;
+  }
+}

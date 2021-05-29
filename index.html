@@ -5,12 +5,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/slider.css">
+  <link rel="stylesheet" href="./styles/our-services.css">
+  <link rel="stylesheet" href="./styles/portfolio.css">
+  <link rel="stylesheet" href="./styles/about-us.css">
+  <link rel="stylesheet" href="./styles/qet-quote.css">
+  <link rel="stylesheet" href="./styles/footer.css">
   <title>Marvel</title>
 </head>
 <body>
-  <!-- header -->
   <header class="header">
     <div class="wrapper header__wrapper">
+      <div class="cover"></div>
+      <div class="icon-burger">
+        <div class="icon-burger-item"></div>
+      </div>
       <div class="logo">
         <h1 class="logo__text">
           Marvel
@@ -20,54 +30,58 @@
       <nav class="nav">
         <ul class="nav__list">
           <li class="nav__list-item nav__list-item-first">
-            <a href="" class="nav__list-item-link  active">Home</a>
+            <a href="#slider" class="nav__list-item-link  active">Home</a>
           </li>
           <li class="nav__list-item">
-            <a href="" class="nav__list-item-link">Services</a>
+            <a href="#services" class="nav__list-item-link">Services</a>
           </li>
           <li class="nav__list-item">
-            <a href="" class="nav__list-item-link">Portfolio</a>
+            <a href="#portfolio" class="nav__list-item-link">Portfolio</a>
           </li>
           <li class="nav__list-item">
-            <a href="" class="nav__list-item-link">About</a>
+            <a href="#about" class="nav__list-item-link">About</a>
           </li>
           <li class="nav__list-item">
-            <a href="" class="nav__list-item-link">Contact</a>
+            <a href="#contacts" class="nav__list-item-link">Contact</a>
           </li>
         </ul>
       </nav>
     </div>
   </header>
-
-  <!-- slider -->
-  <section class="slider">
-    <div class="wrapper wrapper slider__wrapper">
+  <section id="slider" class="slider section">
+    <div class="slider__wrapper wrapper">
       <h2 class="slider__header">Slider</h2>
-      <div class="vertical-phone">
-        <div class="vertical-phone__img"></div>
-        <div class="vertical-phone__shadow"></div>
-        <div class="vertical-phone__display"></div>
+      <div class="slides__container">
+        <div class="slide__item">
+          <div class="vertical-phone">
+            <div class="vertical-phone__img phones"></div>
+            <div class="vertical-phone__shadow"></div>
+            <div class="vertical-phone__display"></div>
+          </div>
+          <div class="horizontal-phone">
+            <div class="horizontal-phone__img phones"></div>
+            <div class="horizontal-phone__shadow"></div>
+            <div class="horizontal-phone__display"></div>
+          </div>
+        </div>
+        <div class="slide__item">
+          <div class="small__phone_left"></div>
+          <div class="center__phone"></div>
+          <div class="small__phone_right"></div>
+        </div>
       </div>
-      <div class="horizontal-phone">
-        <div class="horizontal-phone__img"></div>
-        <div class="horizontal-phone__shadow"></div>
-        <div class="horizontal-phone__display"></div>
-      </div>
-      <button class="left-arrow">
-        <img src="./assets/img/arrow-left.svg" alt="left-arrow">
-      </button>
-      <button class="right-arrow">
-        <img src="./assets/img/arrow-right.svg" alt="right-arrow">
-      </button>
+      <button class="left-arrow"></button>
+      <button class="right-arrow"></button>
     </div>
   </section>
-
-  <!-- our services -->
-  <section class="our-services">
+  <section id="services" class="our-services section">
     <div class="wrapper out-services__wrapper">
       <h2 class="title our-servicer_title ">Our Services</h2>
-      <p class="description our-services_description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-
+      <p class="description our-services_description">
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
+        Duis mollis, non commodo luctus, nisi erat porttitor ligula, 
+        eget lacinia odio sem nec elit. Fusce dapibus, 
+        tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
       <div class="our-services__advantages">
         <div class="our-services__advantages-item">
           <div class="our-services__advantages-item-img">
@@ -75,7 +89,10 @@
           </div>
           <div class="our-services__advantages-item-desc">
             <h3 class="our-services__advantages-item-desc-title">Custom Design</h3>
-            <p class="our-services__advantages-item-desc-text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+            <p class="our-services__advantages-item-desc-text">
+              Curabitur vestibulum eget mauris quis laoreet. 
+              Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
+            </p>
           </div>
         </div>
         <div class="our-services__advantages-item mr">
@@ -84,7 +101,10 @@
           </div>
           <div class="our-services__advantages-item-desc">
             <h3 class="our-services__advantages-item-desc-title">Inovative Ideas</h3>
-            <p class="our-services__advantages-item-desc-text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+            <p class="our-services__advantages-item-desc-text">
+              Quisque luctus, quam eget molestie commodo, 
+              lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+            </p>
           </div>
         </div>
         <div class="our-services__advantages-item">
@@ -93,7 +113,10 @@
           </div>
           <div class="our-services__advantages-item-desc">
             <h3 class="our-services__advantages-item-desc-title">Love Is The Answer</h3>
-            <p class="our-services__advantages-item-desc-text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+            <p class="our-services__advantages-item-desc-text">
+              Nulla sed nunc et tortor luctus faucibus. 
+              Morbi at aliquet turpis, et consequat felis. 
+              Quisque condimentum.
             </p>
           </div>
         </div>
@@ -103,7 +126,10 @@
           </div>
           <div class="our-services__advantages-item-desc">
             <h3 class="our-services__advantages-item-desc-title">Responsive Layout</h3>
-            <p class="our-services__advantages-item-desc-text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
+            <p class="our-services__advantages-item-desc-text">
+              Sed porttitor placerat rhoncus. In at nunc tellus. 
+              Maecenas blandit nunc ligula. Praesent elit leo.
+            </p>
           </div>
         </div>
         <div class="our-services__advantages-item">
@@ -112,65 +138,77 @@
           </div>
           <div class="our-services__advantages-item-desc">
             <h3 class="our-services__advantages-item-desc-title our-services__advantages-item-desc-title_support">24 / 7 Support</h3>
-            <p class="our-services__advantages-item-desc-text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .</p>
+            <p class="our-services__advantages-item-desc-text">
+              Vivamus vel quam lacinia, tincidunt dui non, 
+              vehicula nisi. Nulla a sem erat.
+              Pellentesque egestas venenatis lorem.
+            </p>
           </div>
         </div>
-        <div class="our-services__advantages-item mr">
+        <div class="our-services__advantages-item mr mb">
           <div class="our-services__advantages-item-img">
             <img src="./assets/img/services-item-6.svg" alt="star">
           </div>
           <div class="our-services__advantages-item-desc">
             <h3 class="our-services__advantages-item-desc-title">Feel Like A Star</h3>
-            <p class="our-services__advantages-item-desc-text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+            <p class="our-services__advantages-item-desc-text">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, 
+              viverra nibh. Fusce vitae aliquam tellus.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </section>
-  <!-- partfolio -->
-  <section class="portfolio">
+  <section id="portfolio" class="portfolio section">
     <div class="wrapper portfolio__wrapper">
       <h2 class="title portfolio_title">Portfolio</h2>
-      <p class="description portfolio__description">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+      <p class="description portfolio__description">
+        Duis mollis, est non commodo luctus, 
+        nisi erat porttitor ligula, eget lacinia odio sem nec elit.
+      </p>
       <div class="portfolio__filter-buttons-block">
-        <button class="portfolio__button active-button">All</button>
-        <button class="portfolio__button">Web Design</button>
-        <button class="portfolio__button">Graphic Design</button>
-        <button class="portfolio__button">Artwork</button>
+        <button class="portfolio__button data-all">All</button>
+        <button class="portfolio__button data-web-design">Web Design</button>
+        <button class="portfolio__button data-graphic-design">Graphic Design</button>
+        <button class="portfolio__button data-artwork">Artwork</button>
       </div>
       <div class="portfolio__img-block">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-1.svg" alt="portfolio-img-1">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-2.svg" alt="portfolio-img-2">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-3.svg" alt="portfolio-img-3">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-4.svg" alt="portfolio-img-4">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-5.svg" alt="portfolio-img-5">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-6.svg" alt="portfolio-img-6">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-7.svg" alt="portfolio-img-7">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-8.svg" alt="portfolio-img-8">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-9.svg" alt="portfolio-img-9">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-10.svg" alt="portfolio-img-10">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-11.svg" alt="portfolio-img-11">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-12.svg" alt="portfolio-img-12">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-1.svg" alt="portfolio-img-1">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-2.svg" alt="portfolio-img-2">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-3.svg" alt="portfolio-img-3">
-        <img class="portfolio__img-block-img" src="./assets/img/portfolio-4.svg" alt="portfolio-img-4">
+        <img id="1" class="portfolio__img-block-img" data-all="1" data-web-design="12" data-graphic-design="6" data-artwork="7" src="./assets/img/portfolio-1.svg" alt="portfolio-img-1">
+        <img id="2" class="portfolio__img-block-img" data-all="2" data-web-design="11" data-graphic-design="5" data-artwork="8" src="./assets/img/portfolio-2.svg" alt="portfolio-img-2">
+        <img id="3" class="portfolio__img-block-img" data-all="3" data-web-design="10" data-graphic-design="4" data-artwork="9" src="./assets/img/portfolio-3.svg" alt="portfolio-img-3">
+        <img id="4" class="portfolio__img-block-img" data-all="4" data-web-design="9" data-graphic-design="3" data-artwork="10" src="./assets/img/portfolio-4.svg" alt="portfolio-img-4">
+        <img id="5" class="portfolio__img-block-img" data-all="5" data-web-design="8" data-graphic-design="2" data-artwork="11" src="./assets/img/portfolio-5.svg" alt="portfolio-img-5">
+        <img id="6" class="portfolio__img-block-img" data-all="6" data-web-design="7" data-graphic-design="1" data-artwork="12" src="./assets/img/portfolio-6.svg" alt="portfolio-img-6">
+        <img id="7" class="portfolio__img-block-img" data-all="7" data-web-design="6" data-graphic-design="12" data-artwork="1" src="./assets/img/portfolio-7.svg" alt="portfolio-img-7">
+        <img id="8" class="portfolio__img-block-img" data-all="8" data-web-design="5" data-graphic-design="11" data-artwork="2" src="./assets/img/portfolio-8.svg" alt="portfolio-img-8">
+        <img id="9" class="portfolio__img-block-img" data-all="9" data-web-design="4" data-graphic-design="10" data-artwork="3" src="./assets/img/portfolio-9.svg" alt="portfolio-img-9">
+        <img id="10" class="portfolio__img-block-img" data-all="10" data-web-design="3" data-graphic-design="9" data-artwork="4" src="./assets/img/portfolio-10.svg" alt="portfolio-img-10">
+        <img id="11" class="portfolio__img-block-img" data-all="11" data-web-design="2" data-graphic-design="8" data-artwork="5" src="./assets/img/portfolio-11.svg" alt="portfolio-img-11">
+        <img id="12" class="portfolio__img-block-img" data-all="12" data-web-design="1" data-graphic-design="7" data-artwork="6" src="./assets/img/portfolio-12.svg" alt="portfolio-img-12">
       </div>
     </div>
   </section>
-  <!-- About Us -->
-  <section class="about-us">
+  <section id="about" class="about-us section">
     <div class="wrapper about-us__wrapper">
       <h2 class="title about-us_title">About Us</h2>
-      <p class="description description about-us_description">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-
+      <p class="description description about-us_description">
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
+        Duis mollis, non commodo luctus, nisi erat porttitor ligula, 
+        eget lacinia odio sem nec elit. Fusce dapibus, 
+        tellus ac cursus commodo, tortor mauris condimentum nibh.
+      </p>
       <div class="staff">
         <div class="employee">
           <div class="employee__img">
             <img class="employee__img-picture" src="./assets//img/photo-1.svg" alt="employee-1">
           </div>
           <h3 class="employee__name">Adam Jensen</h3>
-          <p class="employee__description">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
+          <p class="employee__description">
+            Quisque luctus, quam eget molestie commodo, 
+            lacus purus cursus purus, 
+            nec rutrum tellus dolor id lorem.
+          </p>
           <div class="sociam-media">
             <a class="social-media__icon" href="#">
               <img src="./assets/img/ico-facebook--nocircle.svg" alt="facebook">
@@ -191,7 +229,11 @@
             <img class="employee__img-picture" src="./assets//img/photo-2.svg" alt="employee-2">
           </div>
           <h3 class="employee__name">Desmond Miles</h3>
-          <p class="employee__description">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
+          <p class="employee__description">
+            Curabitur vestibulum eget mauris quis laoreet. 
+            Phasellus in quam laoreet, viverra lacus ut, 
+            ultrices velit.
+          </p>
           <div class="sociam-media">
             <a class="social-media__icon" href="#">
               <img src="./assets/img/ico-facebook--nocircle.svg" alt="facebook">
@@ -212,7 +254,11 @@
             <img class="employee__img-picture" src="./assets//img/photo-3.svg" alt="employee-3">
           </div>
           <h3 class="employee__name">Scolara Visari</h3>
-          <p class="employee__description">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
+          <p class="employee__description">
+            Nulla sed nunc et tortor luctus faucibus. 
+            Morbi at aliquet turpis, et consequat felis. 
+            Quisque condimentum.
+          </p>
           <div class="sociam-media">
             <a class="social-media__icon" href="#">
               <img src="./assets/img/ico-facebook--nocircle.svg" alt="facebook">
@@ -231,29 +277,33 @@
       </div>
     </div>
   </section>
-  <!-- get a quote -->
-  <section class="get-quote">
+  <section id="contacts" class="get-quote section">
     <div class="wrapper get-quote__wrapper">
       <h2 class="get-quote__title">Get a Quote</h2>
       <p class="get-quote__description">
-        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+        Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. 
+        Duis mollis, non commodo luctus, nisi erat porttitor ligula, 
+        eget lacinia odio sem nec elit. Fusce dapibus, 
+        tellus ac cursus commodo, tortor mauris condimentum nibh.
       </p>
-
       <div class="form-block">
         <div class="form-block__form">
-          <form action="#" id="get-quote">
+          <form action="#" id="get-quote-form">
             <input type="text" name="name" class="form-block__input" placeholder="Name (required)" pattern="^[a-zA-Z]+$" required>
             <input type="email" name="email" class="form-block__input" placeholder="Email (required)" required>
-            <input type="text" class="form-block__input" placeholder="Subject">
-            <textarea type="text" class="form-block__input form-block__textarea" placeholder="Describe your project in detail..."></textarea>
+            <input type="text" name="subject" class="form-block__input" placeholder="Subject">
+            <textarea type="text" name="description" class="form-block__input form-block__textarea" placeholder="Describe your project in detail..."></textarea>
             <button tupe="submit" form="get-quote" class="form-block__btn">Send</button>
           </form>
         </div>
         <div class="form-block__info">
           <h3 class="form-block__info-title">Contact Information</h3>
-          <p class="form-block__info-description">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. 
+          <p class="form-block__info-description">
+            Quisque hendrerit purus dapibus, ornare nibh vitae, 
+            viverra nibh. Fusce vitae aliquam tellus. 
+            Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. 
+            Morbi at aliquet turpis, et consequat felis. 
           </p>
-
           <div class="contacts">
             <div class="contacts__contact">
               <div class="contacts__contact-icon">
@@ -282,16 +332,24 @@
           </div>
         </div>
       </div>
+      <div class="modal-window">
+        <div class="modal-window__wrapper"></div>
+        <div class="modal-window__content">
+          <h3 class="modal-window__content-title">Email sent</h3>
+          <p class="modal-window__content-theme"></p>
+          <p class="modal-window__content-description"></p>
+          <button class="modal-window__btn" type="submit">Ok</button>
+        </div>
+      </div>
     </div>
   </section>
-  <!-- footer -->
   <footer class="footer">
     <div class="wrapper footer__wrapper">
       <div class="footer__copyright">
         <span class="copyright-sign">&copy</span>
         <span class="copyright-text">Copyright 2021</span> 
       </div>
-      <div class="sociam-media">
+      <div class="sociam-media footer_smm">
         <a class="social-media__icon" href="#">
           <img src="./assets/img/ico-facebook--nocircle.svg" alt="facebook">
         </a>
@@ -307,5 +365,6 @@
       </div>
     </div>
   </footer>
+  <script src="./script.js"></script>
 </body>
 </html>
